@@ -1,4 +1,4 @@
-local function ixActMenu()
+local function ixActMenu(len, client)
 	local animation = {"/Actstand","/Actsit","/Actsitwall","/Actcheer","/Actlean","/Actinjured","/Actarrestwall","/Actarrest","/Actthreat","/Actdeny","/Actmotion","/Actwave","/Actpant","/ActWindow"}
 	local animationdesc = {"Stand here","Sit","Sit against a wall","Cheer","Lean against a wall","Lay on the ground injured","Face a wall","Put your hands on your head","Threat","Deny","Motion","Wave","Pant","Lay against a window"}
 	local frame = vgui.Create( "DFrame" )
@@ -105,4 +105,4 @@ local function ixActMenu()
 		end
 		left:AddItem( but )
 end
-usermessage.Hook("ixActMenu", ixActMenu)
+net.Receive("ixActMenu", ixActMenu)

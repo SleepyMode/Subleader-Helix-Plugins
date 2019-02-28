@@ -1,6 +1,6 @@
 local PLUGIN = PLUGIN
 
-function PLUGIN:ShowHelp( client )
-    umsg.Start( "ixActMenu", client )
-    umsg.End()
+function PLUGIN:ShowHelp(client)
+    net.Start("ixActMenu")
+    net.Send(client)
 end
